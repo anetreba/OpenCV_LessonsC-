@@ -4,20 +4,20 @@
 
 #include "InfoPixel.h"
 
-InfoPixel::InfoPixel(cv::Mat &image, int x, int y) {
-    this->x = x;
-    this->y = y;
+InfoPixel::InfoPixel(const cv::Mat &image, int x, int y) {
+    _x = x;
+    _y = y;
     cv::Vec3b intensity = image.at<cv::Vec3b>(y, x);
-    blue = intensity.val[0];
-    green = intensity.val[1];
-    red = intensity.val[2];
+    _blue = intensity.val[0];
+    _green = intensity.val[1];
+    _red = intensity.val[2];
 }
 
 void InfoPixel::print_info_pix() {
     std::cout << "--------------------" << std::endl;
-    std::cout << "Colors in position (" << x << " ," << y << ")" << std::endl;
-    std::cout << "Blue = " << blue << std::endl;
-    std::cout << "Green = " << green << std::endl;
-    std::cout << "Red = " << red << std::endl;
+    std::cout << "Colors in position (" << _x << " ," << _y << ")" << std::endl;
+    std::cout << "Blue = " << _blue << std::endl;
+    std::cout << "Green = " << _green << std::endl;
+    std::cout << "Red = " << _red << std::endl;
     std::cout << "--------------------" << std::endl;
 }

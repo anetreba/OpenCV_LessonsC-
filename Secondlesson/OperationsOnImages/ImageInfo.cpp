@@ -4,10 +4,10 @@
 
 #include "ImageInfo.h"
 
-ImageInfo::ImageInfo(cv::Mat& image) {
-    cols = image.cols;
-    rows = image.rows;
-    type = set_type(image.type());
+ImageInfo::ImageInfo(const cv::Mat& image) {
+    _cols = image.cols;
+    _rows = image.rows;
+    _type = set_type(image.type());
 }
 
 //function to make a string which represent type of image
@@ -50,8 +50,8 @@ std::string ImageInfo::set_type(int type) {
 
 void ImageInfo::print_info() {
     std::cout << "--------------------" << std::endl;
-    std::cout << "Width : " << cols << std::endl;
-    std::cout << "Height: " << rows << std::endl;
-    std::cout << "Type: " << type << std::endl;
+    std::cout << "Width : " << _cols << std::endl;
+    std::cout << "Height: " << _rows << std::endl;
+    std::cout << "Type: " << _type << std::endl;
     std::cout << "--------------------" << std::endl;
 }

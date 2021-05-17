@@ -11,11 +11,11 @@
 
 class ImageInfo {
     private:
-        int cols;
-        int rows;
-        std::string type;
+        int _cols;
+        int _rows;
+        std::string _type;
     public:
-        ImageInfo(cv::Mat& image);
+        ImageInfo(const cv::Mat& image);
         std::string set_type(int type);
         void print_info();
 };

@@ -11,13 +11,13 @@
 
 class InfoPixel {
     private:
-        int x;
-        int y;
-        int blue;
-        int green;
-        int red;
+        int _x;
+        int _y;
+        int _blue;
+        int _green;
+        int _red;
     public:
-        InfoPixel(cv::Mat& image, int x, int y);
+        InfoPixel(const cv::Mat& image, int x, int y);
         void print_info_pix();
 };
 
