@@ -16,7 +16,7 @@ public:
     TransformImage(const cv::Mat& image);
     void resize_image(int cols, int rows);
     void affine_warm(int angle, int scale, int border_mode);
-    void show_res();
+    void show_res() const;
 };
 
 

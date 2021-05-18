@@ -7,17 +7,17 @@ using namespace cv;
 int main() {
     //Load image
     Mat image = cv::imread("photo.jpg");
+
     TransformImage transformImage(image);
     int cols = image.cols * 2;
     int rows = image.rows * 2;
-
+    //resize image to size cols and rows
     transformImage.resize_image(cols, rows);
 
-    int angle = 90;
-    int scale = 50;
-    int border_mode = 0;
-
-    transformImage.affine_warm(angle, scale, border_mode);
+    constexpr int angle = 90;
+    constexpr int scale = 50;
+    //rotate by angle, scale, make a different border mode
+    transformImage.affine_warm(angle, scale, BORDER_REFLECT);
     transformImage.show_res();
 
     waitKey(0);

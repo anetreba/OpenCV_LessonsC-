@@ -12,7 +12,7 @@ void TransformImage::resize_image(int cols, int rows) {
     cv::resize(_image, _res_resize, cv::Size(cols, rows), 1, 1, cv::INTER_CUBIC);
 }
 
-void TransformImage::show_res() {
+void TransformImage::show_res() const {
     cv::namedWindow("image"); // Create a window
     cv::imshow("image", _image);
     if (!_res_resize.empty()) {
