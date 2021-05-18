@@ -48,7 +48,7 @@ std::string ImageInfo::set_type(int type) {
     return r;
 }
 
-void ImageInfo::print_info() {
+void ImageInfo::print_info() const{
     std::cout << "--------------------" << std::endl;
     std::cout << "Width : " << _cols << std::endl;
     std::cout << "Height: " << _rows << std::endl;

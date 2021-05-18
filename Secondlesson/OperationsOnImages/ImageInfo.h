@@ -17,7 +17,7 @@ class ImageInfo {
     public:
         ImageInfo(const cv::Mat& image);
         std::string set_type(int type);
-        void print_info();
+        void print_info() const;
 };
 
 

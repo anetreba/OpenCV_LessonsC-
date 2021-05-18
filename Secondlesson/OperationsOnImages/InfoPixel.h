@@ -18,7 +18,7 @@ class InfoPixel {
         int _red;
     public:
         InfoPixel(const cv::Mat& image, int x, int y);
-        void print_info_pix();
+        void print_info_pix() const;
 };
 
 

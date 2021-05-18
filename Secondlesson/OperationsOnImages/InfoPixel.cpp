@@ -13,7 +13,7 @@ InfoPixel::InfoPixel(const cv::Mat &image, int x, int y) {
     _red = intensity.val[2];
 }
 
-void InfoPixel::print_info_pix() {
+void InfoPixel::print_info_pix() const {
     std::cout << "--------------------" << std::endl;
     std::cout << "Colors in position (" << _x << " ," << _y << ")" << std::endl;
     std::cout << "Blue = " << _blue << std::endl;
