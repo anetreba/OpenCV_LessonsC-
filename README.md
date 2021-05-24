@@ -8,13 +8,13 @@ Object Detection (objdetect module), OpenCV-Python Bindings
 
 Download OpenCV, Configure and install it.
 Ubuntu:
-$ sudo apt-get install git
-$ git clone https://github.com/opencv/opencv.git
-$ mkdir build
-$ cd build
-$ cmake ../
-$ make
-# sudo make install
+1. $ sudo apt-get install git
+2. $ git clone https://github.com/opencv/opencv.git
+3. $ mkdir build
+4. $ cd build
+5. $ cmake ../
+6. $ make
+ (sudo make install)
 
 ## Building the program
 
