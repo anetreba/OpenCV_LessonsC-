@@ -21,14 +21,14 @@ private:
     cv::Mat _img_black_hat;
 public:
     MorphTrans(const std::string& filename);
-    void erode();
-    void dilate();
-    void erode_followed_dilation();
-    void dilate_followed_erode();
-    void make_gradient();
-    void make_top_hat();
-    void make_black_hat();
-    void show() const;
+    void erode(); //erode image with 5x5 kernel with full of ones
+    void dilate(); //dilate image with 5x5 kernel with full of ones
+    void erode_followed_dilation(); //Opening image with 5x5 kernel with full of ones
+    void dilate_followed_erode(); //Closing image with 5x5 kernel with full of ones
+    void make_gradient(); //Make gradient, the difference between dilation and erosion with  5x5 kernel with full of ones
+    void make_top_hat(); //Make top hat, the difference between input image and Opening of the image with  5x5 kernel with full of ones
+    void make_black_hat(); //Make black hat, he difference between the closing of the input image and input image with  5x5 kernel with full of ones
+    void show() const; //Show all images
 };
 
 
